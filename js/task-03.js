@@ -12,3 +12,10 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const listEl = document.querySelector('.gallery ')
+listEl.classList.add('grid');
+
+for (let el of images)
+    document.querySelector('.gallery ').insertAdjacentHTML('beforeEnd', `<li class = "grid__item"><img src="${el.url}" width = 320 alt="${el.alt}" ></li>`);
+
