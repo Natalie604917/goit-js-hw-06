@@ -1,12 +1,3 @@
-// const input = document.querySelector('#validation-input');
-// console.log(input.dataset);
-
-// input.addEventListener('blur', onInputBlur);
-// function onInputBlur(){
-//    if (input.dataset === 6){
-//        return  validation-input
-//    }
-// }
 
 
 const inputEl = document.querySelector('input');
