@@ -1,35 +1,45 @@
-const counterValue = 0;
-const actions = document.querySelectorAll('#counter button')
-// console.log(actions[0]);
+// const decrementBtn = document.querySelector('button[data-action="decrement"]');
+// console.log(decrementBtn); 
 
-const decrement = actions[0];
-console.log(decrement)
-const increment = actions[1];
-console.log(increment)
+// const incrementBtn = document.querySelector('button[data-action="increment"]');
+// console.log(incrementBtn); 
 
-increment.addEventListener('click', event => {
-    console.log(event)
-    console.log('Add event')
-});
-decrement.addEventListener('click',event => {
-    console.log(event)
-    console.log('Cнимаю слушатель')
 
-});
-
-function onTargetBtnClick (event){
-console.log('click...')
-}
-
-//  const CounterPlug = function({counterValue = 0, step = 1} ={}){
-//     this.value = counterValue;
-//     this.step = step;
-// };
-// CounterPlug.prototype.increment = function(){
-//     this.value += this.step;
+// let counterValue = 0;
+// const increment = () => {
+// counterValue += 1;
+// document.querySelector('#value').textContent = counterValue
 // }
-// CounterPlug.prototype.decrement = function(){
-//     this.value -= this.step;
+
+// const decrement = () =>{
+// counterValue -= 1;
+// document.querySelector('#value').textContent = counterValue
+
 // }
-// const counter = new CounterPlug({step:1})
-// console.log(counter)
+
+// incrementBtn.addEventListener("click", increment )
+// decrementBtn.addEventListener("click", decrement )
+
+
+
+
+const wrap_button = {
+    sub: document.querySelector('[data-action='increment']'),
+    add: document.querySelector('[data-action='decrement']'),
+    span: document.querySelector('#value'),
+    wrapper: document.querySelector('#counter '),
+  };
+  let counterValue = 0;
+  const increment = () => {
+    counterValue += 1;
+  
+    document.getElementById('value').textContent = counterValue;
+  };
+  
+  const decrement = () => {
+    counterValue -= 1;
+  
+    document.getElementById('value').textContent = counterValue;
+  };
+  wrap_button.sub.addEventListener('click', increment);
+  wrap_button.add.addEventListener('click', decrement);
