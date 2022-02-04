@@ -16,3 +16,4 @@ const element =  ingredients.map(option => { // newIngredientElements
 })
 console.log(ingredientsList)
 ingredientsList.append(...element)
+
