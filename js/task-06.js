@@ -2,7 +2,7 @@
 
 const inputEl = document.querySelector('input');
 inputEl.addEventListener('blur', event => {
-  if (event.currentTarget.value.length >= inputEl.dataset.length) {
+  if (event.currentTarget.value.length  === 6) {
     inputEl.classList.add('valid');
     inputEl.classList.remove('invalid');
   } else {
@@ -10,3 +10,4 @@ inputEl.addEventListener('blur', event => {
     inputEl.classList.remove('valid');
   }
 });
+

@@ -1,32 +1,30 @@
-const formRef = document.querySelector('.login-form');
-formRef.addEventListener('submit', onFormSubmit);
+const formRef = document.querySelector('.login-form')
+formRef.addEventListener('submit', onFormSubmit)
 
 function onFormSubmit(event) {
-    event.preventDefault();
+event.preventDefault()
+const formElements = event.currentTarget.elements
 
-    const formElements = event.currentTarget.elements;
+const mail = formElements.email.value
+const password = formElements.password.value
 
+const formData = {
+mail,
+password,
+}
 
-    const mail = formElements.email.value;
-    const password = formElements.password.value;
-    
-
-    const formData = {
-        mail,
-        password,
-
-    };
-
-
-    if (!mail) {
+if (!mail) {
     alert('полe ввода email должно быть заполнено.')
     }
+    
     if (!password) {
     alert('полe ввода password должно быть заполнено.')
     }
     
     console.log(formData)
-
-    formRef.reset();
-
+    // event.currentTarget.reset();
+    
 }
+
+
+

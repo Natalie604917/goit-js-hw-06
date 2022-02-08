@@ -43,11 +43,11 @@ button {
   margin: 20px;
   --grid__item: 3;
 }
- img{
-   height: 100%;
- }
+img {
+  height: 100%;
+}
 
- #validation-input {
+#validation-input {
   border: 3px solid #bdbdbd;
 }
 

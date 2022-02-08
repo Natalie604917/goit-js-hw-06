@@ -16,6 +16,5 @@ const images = [
 const listEl = document.querySelector('.gallery ')
 listEl.classList.add('grid');
 
-for (let el of images)
-    document.querySelector('.gallery ').insertAdjacentHTML('beforeEnd', `<li class = "grid__item"><img src="${el.url}" width = 320 alt="${el.alt}" ></li>`);
-
+const newItems = images.map((image) => `<li class = "grid__item"><img src="${image.url}" width = 320 alt="${image.alt}"></li>`).join("")
+listEl.insertAdjacentHTML("afterbegin", newItems)
