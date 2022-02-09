@@ -42,6 +42,7 @@ button {
 .gallery {
   margin: 20px;
   --grid__item: 3;
+ 
 }
 img {
   height: 100%;
