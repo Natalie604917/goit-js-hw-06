@@ -12,16 +12,22 @@ const refs = {
  
 };
 
-function changeColor() {
-  refs.bodyColor.style.backgroundColor = getRandomHexColor();
-  refs.nameOfColor.textContent = getRandomHexColor();
-}
+// function changeColor() {
+//   refs.bodyColor.style.backgroundColor = getRandomHexColor();
+//   refs.nameOfColor.textContent = getRandomHexColor();
+// }
 
-refs.button.addEventListener("click", changeColor);
+// refs.button.addEventListener("click", changeColor);
 
 
 
- 
+const newColor = getRandomHexColor()
+  refs.button.addEventListener('click', () => {
+  refs.bodyColor.style.backgroundColor && nameOfColor.textContent === newColor;
+  
+})
+
+console.log(newColor)
  
 
 

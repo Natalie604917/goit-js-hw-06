@@ -13,18 +13,17 @@ mail,
 password,
 }
 
-if (!mail) {
-    alert('полe ввода email должно быть заполнено.')
-    }
-    
-    if (!password) {
-    alert('полe ввода password должно быть заполнено.')
-    }
-    
-    console.log(formData)
-    // event.currentTarget.reset();
-    
+if ( mail=== '' || password === '') {
+    alert('все поля должны быть заполнены.');
+    return;
 }
+
+console.log(formData)
+formRef.reset();
+
+}
+
+
 
 
 
